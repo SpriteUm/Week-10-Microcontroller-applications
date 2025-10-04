@@ -24,10 +24,10 @@ void app_main(void)
         // read level of gpio 15 and store in SW1_Status 
         SW1_Status =  gpio_get_level(15);
 
-        LED1_status = !SW1_Status;     
+        LED1_status = !SW1_Status;
 
         gpio_set_level(16, LED1_status);
-   
+
          //   Delay
         vTaskDelay(pdMS_TO_TICKS(100));
     }
